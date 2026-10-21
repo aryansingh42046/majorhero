@@ -1,0 +1,86 @@
+# Raw retinal datasets
+/datasets/raw/
+
+# Processed retinal datasets
+/datasets/processed/
+
+# Generated manifests and reports
+/datasets/manifests/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Keep this file tracked if needed
+!.env.example
+
+# ---------------------------------------------------------------
+# Datasets: image data must NEVER be committed
+# ---------------------------------------------------------------
+datasets/raw/*
+datasets/processed/*
+!datasets/raw/.gitkeep
+!datasets/processed/.gitkeep
+
+# Generated inspection outputs (full inventories can be large).
+# The lightweight split/label manifests created later stay tracked.
+datasets/datasets/manifests/inspection/
+
+# Archives and image files anywhere in the repo (safety net).
+# Small illustrative images for the README go in docs/ (allowed below).
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.bmp
+*.npy
+*.npz
+!docs/**
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+
+# ---------------------------------------------------------------
+# Python / environment
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.env
+
+# Logs and temporary output
+logs/
+*.log
+tmp/
+outputs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
